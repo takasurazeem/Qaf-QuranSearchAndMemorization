@@ -65,6 +65,8 @@ class QuranReadingViewController: UIViewController, SFSpeechRecognizerDelegate {
             case .restricted:
                 isButtonEnabled = false
                 print("speech recognition is restricted on this device")
+            @unknown default:
+                break
             }
             
             OperationQueue.main.addOperation {
@@ -125,9 +127,9 @@ class QuranReadingViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryRecord)
-            try audioSession.setMode(AVAudioSessionModeMeasurement)
-            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+            try audioSession.setCategory(AVAudioSession.Category.record)
+            try audioSession.setMode(AVAudioSession.Mode.measurement)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         }
         catch {
             print("audioSession properties weren't set because of an error")

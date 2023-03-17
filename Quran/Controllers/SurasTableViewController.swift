@@ -86,7 +86,7 @@ extension SurasTableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isSearching{
-            return UITableViewAutomaticDimension
+            return UITableView.automaticDimension
         }
         return 75
     }
@@ -153,7 +153,7 @@ extension SurasTableViewController: UIPickerViewDelegate, UIPickerViewDataSource
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: 250,height: 250)
         
-        let alert = UIAlertController(title: "Select Verses", message: "From \t To\n\n", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Select Verses", message: "From \t To\n\n", preferredStyle: .alert)
         alert.isModalInPopover = true
         alert.setValue(vc, forKey: "contentViewController")
         let pickerFrame = UIPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 300))

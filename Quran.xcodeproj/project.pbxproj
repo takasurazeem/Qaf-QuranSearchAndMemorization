@@ -14,7 +14,6 @@
 		861D496D22160EB800CF3449 /* BigDataSet(small).csv in Resources */ = {isa = PBXBuildFile; fileRef = 861D496B22160EB800CF3449 /* BigDataSet(small).csv */; };
 		861D496E22160EB800CF3449 /* newcsv(small).csv in Resources */ = {isa = PBXBuildFile; fileRef = 861D496C22160EB800CF3449 /* newcsv(small).csv */; };
 		861D497622163A6A00CF3449 /* AyaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D497522163A6A00CF3449 /* AyaTableViewCell.swift */; };
-		86223B63224E698200706DAB /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86223B62224E698200706DAB /* Client.swift */; };
 		8656014222024DAA00A721F5 /* suraNames.json in Resources */ = {isa = PBXBuildFile; fileRef = 8656014122024DAA00A721F5 /* suraNames.json */; };
 		867A22C622AB443400525FB7 /* RetrivedTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A22C522AB443400525FB7 /* RetrivedTextTableViewCell.swift */; };
 		867B428E22519A86009DF490 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B428D22519A86009DF490 /* ViewController+Extension.swift */; };
@@ -41,7 +40,6 @@
 		861D496B22160EB800CF3449 /* BigDataSet(small).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BigDataSet(small).csv"; sourceTree = "<group>"; };
 		861D496C22160EB800CF3449 /* newcsv(small).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "newcsv(small).csv"; sourceTree = "<group>"; };
 		861D497522163A6A00CF3449 /* AyaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyaTableViewCell.swift; sourceTree = "<group>"; };
-		86223B62224E698200706DAB /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		8656014122024DAA00A721F5 /* suraNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suraNames.json; sourceTree = "<group>"; };
 		867A22C522AB443400525FB7 /* RetrivedTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrivedTextTableViewCell.swift; sourceTree = "<group>"; };
 		867B428D22519A86009DF490 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				860F68D8217AA40E00627AB4 /* AppDelegate.swift */,
-				86223B61224E697300706DAB /* Networking */,
 				861D49792216531700CF3449 /* Views */,
 				861D4978221652C100CF3449 /* Controllers */,
 				867B428C22519A60009DF490 /* Extensions */,
@@ -118,14 +115,6 @@
 				860F68E3217AA40E00627AB4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		86223B61224E697300706DAB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				86223B62224E698200706DAB /* Client.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		8656013E22024D0300A721F5 /* Resources */ = {
@@ -214,12 +203,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Eyad Shokry";
 				TargetAttributes = {
 					860F68D4217AA40E00627AB4 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -277,7 +266,6 @@
 				86E4EF2B22A56E3900550EAD /* MenuCollectionViewCell.swift in Sources */,
 				867A22C622AB443400525FB7 /* RetrivedTextTableViewCell.swift in Sources */,
 				86DF2BAA2242507E00D6C8E6 /* QuranReadingViewController.swift in Sources */,
-				86223B63224E698200706DAB /* Client.swift in Sources */,
 				C6A2DAE722A172850046C35D /* QuranResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -354,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -388,6 +377,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -407,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -425,7 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shokry.Quran;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -440,7 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shokry.Quran;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
