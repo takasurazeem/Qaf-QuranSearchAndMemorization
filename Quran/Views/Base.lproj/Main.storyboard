@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tDV-1C-cXe">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tDV-1C-cXe">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +24,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" semanticContentAttribute="playback" barStyle="blackTranslucent" searchBarStyle="prominent" text="" placeholder="search for verse" translucent="NO" backgroundImage="seaarch bar" id="YS9-QX-4xm">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
                             <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999998" height="0.45000000000000001"/>
                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,23 +35,21 @@
                             <outlet property="delegate" destination="f9b-rz-DQL" id="6cu-fm-cZo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Dbf-OL-Wnh"/>
+                    <navigationItem key="navigationItem" id="Dbf-OL-Wnh">
+                        <barButtonItem key="rightBarButtonItem" title="Quiz" id="muX-Gl-YUE">
+                            <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="prepareQuiz:" destination="f9b-rz-DQL" id="3Se-3q-86G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="YS9-QX-4xm" id="wc9-vn-EoW"/>
-                        <outlet property="searchDisplayController" destination="Kss-S0-fAL" id="eLR-Bn-rU6"/>
                         <outlet property="suarTableView" destination="ZN9-bt-s0K" id="7tS-ac-5Fe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJx-eq-ZtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Kss-S0-fAL">
-                    <connections>
-                        <outlet property="delegate" destination="f9b-rz-DQL" id="sUv-Vn-C8j"/>
-                        <outlet property="searchContentsController" destination="f9b-rz-DQL" id="AUm-fK-BBw"/>
-                        <outlet property="searchResultsDataSource" destination="f9b-rz-DQL" id="Z1V-6L-t94"/>
-                        <outlet property="searchResultsDelegate" destination="f9b-rz-DQL" id="Der-F1-jbc"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="626.5" y="456.5"/>
         </scene>
@@ -88,7 +83,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="السورة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFX-Kf-J0o">
-                                <rect key="frame" x="248" y="24" width="86" height="28"/>
+                                <rect key="frame" x="248" y="24" width="86" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -100,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHr-K6-bGM">
-                                <rect key="frame" x="120" y="609" width="141" height="53"/>
+                                <rect key="frame" x="120" y="609" width="140" height="53"/>
                                 <color key="backgroundColor" red="0.87920719385147095" green="0.78722405433654785" blue="0.56890499591827393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="record"/>
                                 <connections>
@@ -108,6 +103,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="co2-xI-mTJ"/>
                         <color key="backgroundColor" red="0.87920719390000002" green="0.78722405429999998" blue="0.56890499589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="co2-xI-mTJ" firstAttribute="bottom" secondItem="AHr-K6-bGM" secondAttribute="bottom" constant="5" id="7qM-KG-adS"/>
@@ -131,7 +127,6 @@
                             <constraint firstAttribute="trailing" secondItem="N2A-ht-Nhu" secondAttribute="trailing" id="y4u-kj-mi7"/>
                             <constraint firstItem="N2A-ht-Nhu" firstAttribute="top" secondItem="co2-xI-mTJ" secondAttribute="top" id="yqE-Md-G2t"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="co2-xI-mTJ"/>
                     </view>
                     <connections>
                         <outlet property="SuraVersesTextView" destination="55q-jI-7dD" id="pZO-mN-fJS"/>
@@ -174,7 +169,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="السورة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-N2-oga">
-                                <rect key="frame" x="248" y="24" width="86" height="28"/>
+                                <rect key="frame" x="248" y="24" width="86" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,6 +181,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5dc-k6-BdP"/>
                         <color key="backgroundColor" red="0.87920719390000002" green="0.78722405429999998" blue="0.56890499589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0nL-zM-QS0" firstAttribute="leading" secondItem="5dc-k6-BdP" secondAttribute="leading" constant="32" id="1wN-FC-g0g"/>
@@ -205,7 +201,6 @@
                             <constraint firstItem="rvc-N2-oga" firstAttribute="leading" secondItem="na8-Wh-odb" secondAttribute="trailing" constant="110" id="vTv-Ox-pQQ"/>
                             <constraint firstItem="0nL-zM-QS0" firstAttribute="top" secondItem="na8-Wh-odb" secondAttribute="bottom" constant="9" id="xST-x1-BbN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5dc-k6-BdP"/>
                     </view>
                     <connections>
                         <outlet property="SuraVersesTextView" destination="7rx-de-1rd" id="0pA-zw-ofC"/>
@@ -238,9 +233,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="newQuranBackground" width="79" height="118"/>
+        <image name="newQuranBackground" width="79.5" height="118.5"/>
         <image name="recitation" width="21" height="21"/>
         <image name="record" width="33" height="33"/>
-        <image name="seaarch bar" width="152" height="37"/>
+        <image name="seaarch bar" width="152" height="37.5"/>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

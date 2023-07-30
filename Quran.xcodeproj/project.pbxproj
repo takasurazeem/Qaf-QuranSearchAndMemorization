@@ -28,6 +28,11 @@
 		C6A2DAE722A172850046C35D /* QuranResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2DAE622A172850046C35D /* QuranResultViewController.swift */; };
 		C6F025B822B3C83B004B0402 /* diwani-bent.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6F025B722B3C83A004B0402 /* diwani-bent.ttf */; };
 		C6F025BA22B3CC1B004B0402 /* pdms-saleem-quranfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6F025B922B3CC17004B0402 /* pdms-saleem-quranfont.ttf */; };
+		F9C4D38B2A765D150026908C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4D38A2A765D150026908C /* QuizView.swift */; };
+		F9C4D38F2A7664BE0026908C /* QuranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4D38E2A7664BE0026908C /* QuranModel.swift */; };
+		F9C4D3912A76654F0026908C /* Bundle+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4D3902A76654F0026908C /* Bundle+Decode.swift */; };
+		F9C4D3942A7665820026908C /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4D3932A7665820026908C /* QuizViewModel.swift */; };
+		F9C4D3962A766C990026908C /* SurahNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F9C4D3952A766C990026908C /* SurahNames.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		C6A2DAE622A172850046C35D /* QuranResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranResultViewController.swift; sourceTree = "<group>"; };
 		C6F025B722B3C83A004B0402 /* diwani-bent.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "diwani-bent.ttf"; sourceTree = "<group>"; };
 		C6F025B922B3CC17004B0402 /* pdms-saleem-quranfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pdms-saleem-quranfont.ttf"; sourceTree = "<group>"; };
+		F9C4D38A2A765D150026908C /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		F9C4D38E2A7664BE0026908C /* QuranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranModel.swift; sourceTree = "<group>"; };
+		F9C4D3902A76654F0026908C /* Bundle+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decode.swift"; sourceTree = "<group>"; };
+		F9C4D3932A7665820026908C /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		F9C4D3952A766C990026908C /* SurahNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurahNames.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				860F68D8217AA40E00627AB4 /* AppDelegate.swift */,
+				F9C4D3892A765D0C0026908C /* Quiz */,
 				861D49792216531700CF3449 /* Views */,
 				861D4978221652C100CF3449 /* Controllers */,
 				867B428C22519A60009DF490 /* Extensions */,
@@ -131,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				867B428D22519A86009DF490 /* ViewController+Extension.swift */,
+				F9C4D3902A76654F0026908C /* Bundle+Decode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +160,7 @@
 		86DF2BA422424AB800D6C8E6 /* json files */ = {
 			isa = PBXGroup;
 			children = (
+				F9C4D3952A766C990026908C /* SurahNames.json */,
 				8656014122024DAA00A721F5 /* suraNames.json */,
 			);
 			path = "json files";
@@ -174,6 +187,40 @@
 				867A22C522AB443400525FB7 /* RetrivedTextTableViewCell.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		F9C4D3892A765D0C0026908C /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				F9C4D3922A7665720026908C /* ViewModel */,
+				F9C4D38C2A76649F0026908C /* Model */,
+				F9C4D38D2A7664AC0026908C /* View */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		F9C4D38C2A76649F0026908C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9C4D38E2A7664BE0026908C /* QuranModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9C4D38D2A7664AC0026908C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9C4D38A2A765D150026908C /* QuizView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9C4D3922A7665720026908C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9C4D3932A7665820026908C /* QuizViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +289,7 @@
 				860F68E5217AA40E00627AB4 /* LaunchScreen.storyboard in Resources */,
 				C6F025B822B3C83B004B0402 /* diwani-bent.ttf in Resources */,
 				8656014222024DAA00A721F5 /* suraNames.json in Resources */,
+				F9C4D3962A766C990026908C /* SurahNames.json in Resources */,
 				C62EE66B2254397C00AE9204 /* TableViewCell.xib in Resources */,
 				861D496D22160EB800CF3449 /* BigDataSet(small).csv in Resources */,
 				860F68E2217AA40E00627AB4 /* Assets.xcassets in Resources */,
@@ -259,13 +307,17 @@
 			files = (
 				C62EE66A2254397C00AE9204 /* TableViewCell.swift in Sources */,
 				C6298DEE21FB45AA00F49575 /* SurasTableViewController.swift in Sources */,
+				F9C4D38B2A765D150026908C /* QuizView.swift in Sources */,
 				860F68D9217AA40E00627AB4 /* AppDelegate.swift in Sources */,
 				861D497622163A6A00CF3449 /* AyaTableViewCell.swift in Sources */,
 				C62216F8226027CA00616D8A /* SearchViewCell.swift in Sources */,
 				867B428E22519A86009DF490 /* ViewController+Extension.swift in Sources */,
+				F9C4D38F2A7664BE0026908C /* QuranModel.swift in Sources */,
 				86E4EF2B22A56E3900550EAD /* MenuCollectionViewCell.swift in Sources */,
+				F9C4D3942A7665820026908C /* QuizViewModel.swift in Sources */,
 				867A22C622AB443400525FB7 /* RetrivedTextTableViewCell.swift in Sources */,
 				86DF2BAA2242507E00D6C8E6 /* QuranReadingViewController.swift in Sources */,
+				F9C4D3912A76654F0026908C /* Bundle+Decode.swift in Sources */,
 				C6A2DAE722A172850046C35D /* QuranResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

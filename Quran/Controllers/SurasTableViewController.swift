@@ -68,6 +68,13 @@ class SurasTableViewController: UITableViewController,UISearchBarDelegate {
             tableView.reloadData()
         }
     }
+    
+    // MARK: - Quiz
+    
+    @IBAction func prepareQuiz(_ sender: UIBarButtonItem) {
+        // TODO: - Show View that prepares for quiz here.
+        print(#function)
+    }
 }
 
 
@@ -154,7 +161,11 @@ extension SurasTableViewController: UIPickerViewDelegate, UIPickerViewDataSource
         vc.preferredContentSize = CGSize(width: 250,height: 250)
         
         let alert = UIAlertController(title: "Select Verses", message: "From \t To\n\n", preferredStyle: .alert)
-        alert.isModalInPopover = true
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         alert.setValue(vc, forKey: "contentViewController")
         let pickerFrame = UIPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 300))
         pickerFrame.delegate = self
