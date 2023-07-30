@@ -17,6 +17,7 @@ struct QuizView: View {
                     Picker("Surah", selection: $viewModel.selectedSurah) {
                         ForEach(viewModel.surahNames) { surah in
                             Text("\(surah.id) \(surah.title)")
+                                .tag(surah)
 //                            HStack {
 //                                Text(surah.id)
 //                                Text(surah.title)

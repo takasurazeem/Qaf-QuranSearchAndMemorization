@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SurasTableViewController: UITableViewController,UISearchBarDelegate {
     
@@ -72,8 +73,8 @@ class SurasTableViewController: UITableViewController,UISearchBarDelegate {
     // MARK: - Quiz
     
     @IBAction func prepareQuiz(_ sender: UIBarButtonItem) {
-        // TODO: - Show View that prepares for quiz here.
-        print(#function)
+        let quizVC = UIHostingController(rootView: QuizView(viewModel: QuizView.ViewModel()))
+        navigationController?.pushViewController(quizVC, animated: true)
     }
 }
 
